@@ -6,7 +6,7 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>个人简历</title>
+  <title>残剑的技术博客</title>
  </head>
  <style type="text/css">
  body{
@@ -92,6 +92,64 @@ span{
 a:link{
   text-decoration: none;color:blue;
 }
+.content{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+}
+.content-img{
+	width: 15%;
+	height:15%;
+	margin-right: 3%;
+}
+.content-left{
+	padding:3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 50%
+}
+.content-span{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	border:1px solid gray;
+	padding: 2%;
+	margin-bottom: 1%;
+}
+p{
+	font-family: "仿宋";
+}
+.content-right{
+	padding:3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 50%
+
+}
+.share{
+	padding:3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+}
+.radio{
+	padding:3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+}
+video{
+	width: 100%;
+	height: 100%;
+}
+a:link {color: #3598DB}		/* 未访问的链接 */
+a:visited {color:gray;font-weight:bold; }	/* 已访问的链接 */
+a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
+a:active {color: #0000FF}
  </style>
  <body>
  <!--
@@ -116,12 +174,48 @@ PHP technology station, front end development</text>
   <!--头部end-->
   <!--nav-->
   <div class="nav">
-  <a href="#"><span>作者简介</span></a>|
-   <a href="#"><span>PHP技术站</span></a>|
-   <a href="#"> <span>源码分享</span></a>|
-    <a href="#"> <span>新手视频</span></a>
+  <a href="#intro" ><span>作者简介</span></a>|
+   <a href="#jishu"><span>PHP技术站</span></a>|
+    <a href="#radio"> <span>新手视频</span></a> |
+      <a href="#share"> <span>源码分享</span></a>
   </div>
-  <div class='footer'>
+  <div class="content">
+  <div class="content-left">
+  <h3>技术站</h3>
+  	<div class='content-span' id='jishu'>
+  		<img class="content-img" src="photo.png"/>
+  		<div>
+  		<text>NIGIX配置文件详解</text>
+  		<p>   ngx_conf_parse 这个函数来完成对配置文件的解析，其实这个函数不仅仅解析文件，还可以用来解析参数和块的，不过我们在这里分析解析文件。</p>
+  		</div>
+  	</div>
+  	<div class='content-span' >
+  		<img class="content-img" src="photo.png"/>
+  		<div>
+  		<text>NIGIX配置文件详解</text>
+  		<p>   ngx_conf_parse 这个函数来完成对配置文件的解析，其实这个函数不仅仅解析文件，还可以用来解析参数和块的，不过我们在这里分析解析文件。</p>
+  		</div>
+  	</div>
+  </div>
+  <div class="content-right" >
+  		<h3>展望高新技术</h3>
+  		<video src="shiping.mp4" controls="controls" autoplay="ture">
+您的浏览器不支持 video 标签。
+</video>
+  		
+  </div>
+  </div>
+    <div class="radio" id="radio">
+  		<h3>新手视频</h3>
+  		<text>MySQL入门基础</text>
+  		<p>http://www.itying.com/</p>
+  </div>
+  <div class="share" id="share">
+	  <h3>源码分享</h3>
+	  		<text>MySQL入门基础</text>
+	  		<p>http://www.itying.com/</p>
+	  </div>
+  <div class='footer' id="intro">
 	  <img src="intro.jpg" class='photo-img' />
      <!--<img src="code.jpg" class='photo-img' />-->
     <img src="timg.jpg" class='photo-img' />

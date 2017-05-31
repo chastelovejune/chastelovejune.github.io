@@ -98,8 +98,7 @@ a:link{
 	justify-content:space-between;
 }
 .content-img{
-	width: 15%;
-	height:15%;
+	width: 46%;
 	margin-right: 3%;
 }
 .content-left{
@@ -114,8 +113,12 @@ a:link{
 	flex-direction: row;
 	justify-content: flex-start;
 	border:1px solid gray;
-	padding: 2%;
-	margin-bottom: 1%;
+	padding: 3%;
+	margin-bottom: 2%;
+}
+.content-text{
+  width: 100%;
+  height: 100%;
 }
 p{
 	font-family: "仿宋";
@@ -137,14 +140,27 @@ p{
 }
 .radio{
 	padding:3%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+
 
 }
 video{
 	width: 100%;
 	height: 100%;
+}
+.share-span{
+		display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.share-content{
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.share-img{
+    width: 45%;
 }
 a:link {color: #3598DB}		/* 未访问的链接 */
 a:visited {color:gray;font-weight:bold; }	/* 已访问的链接 */
@@ -183,19 +199,44 @@ PHP technology station, front end development</text>
   <div class="content-left">
   <h3>技术站</h3>
   	<div class='content-span' id='jishu'>
-  		<img class="content-img" src="photo.png"/>
-  		<div>
-  		<text>NIGIX配置文件详解</text>
-  		<p>   ngx_conf_parse 这个函数来完成对配置文件的解析，其实这个函数不仅仅解析文件，还可以用来解析参数和块的，不过我们在这里分析解析文件。</p>
+  		<img class="content-img" src="flex.png"/>
+  		<div class="content-text">
+  		<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target=""><text>flex布局基础——精通网页布局</text></a>
+  		<p>   网页布局（layout）是 CSS 的一个重点应用。布局的传统解决方案，基于盒状模型，依赖 display 属性 + position属性 + float属性。它对于那些特殊布局非常不方便</p>
   		</div>
   	</div>
+        <div class='content-span'>
+      <img class="content-img" src="flex.png"/>
+      <div class="content-text">
+      <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target=""><text>flex实例篇——精通网页布局</text></a>
+      <p>  上一篇文章介绍了Flex布局的语法，今天介绍常见布局的Flex写法。
+你会看到，不管是什么布局，Flex往往都可以几行命令搞定。</p>
+      </div>
+    </div>
   	<div class='content-span' >
-  		<img class="content-img" src="photo.png"/>
-  		<div>
-  		<text>NIGIX配置文件详解</text>
-  		<p>   ngx_conf_parse 这个函数来完成对配置文件的解析，其实这个函数不仅仅解析文件，还可以用来解析参数和块的，不过我们在这里分析解析文件。</p>
+  		<img class="content-img" src="nginx.png"/>
+  		<div class="content-text">
+  		<a href="http://blog.csdn.net/wangyunzhong123/article/details/52764759" target="_blank"><text>Apache 在更改DocumentRoot，或新增虚拟目录之后出现403错误的解决方法汇总详解（Linux）</text></a>
+  		<p>   文讲述在Linux系统下编译安装Apache之后，自行更改DocumentRoot目录指向后，站点出现403错误，浏览器中显示：Forbidden You don’t have permission to access / on this server.</p>
   		</div>
   	</div>
+    <div class='content-span' >
+      <img class="content-img" src="nginx.jpg"/>
+      <div class="content-text">
+      <a href="http://www.9958.pw/post/nginx_config#6531798-qzone-1-65778-1afaa8736951645a8df12be13c808fce" target="_blank"><text>Nginx配置文件nginx.conf中文详解</text></a>
+      <p>  通性配置
+
+定义Nginx运行的用户和用户组
+
+user www www;
+nginx进程数，建议设置为等于CPU总核心数.全局错误日志定义类型，[ debug | info | notice | warn | error | crit ]
+
+error_log /var/log/nginx/error.log info;
+进程文件
+
+</p>
+      </div>
+    </div>
   </div>
   <div class="content-right" >
   		<h3>展望高新技术</h3>
@@ -207,14 +248,44 @@ PHP technology station, front end development</text>
   </div>
     <div class="radio" id="radio">
   		<h3>新手视频</h3>
-  		<text>MySQL入门基础</text>
-  		<p>http://www.itying.com/</p>
+  		<p align="left"><font size="4"><font color="#0000ff">第一部:PHP基础部分(131集,</font><font color="#006400">发布完毕</font><font color="#0000ff">)</font></font></p><p align="left">讲html与PHPt基础,PHP环境搭建,与留言本编写.</p><br />
+<p align="left"><strong>下载地址:</strong></p><p align="left">① HTML视频[2014新版]&nbsp; &nbsp;<a href="http://pan.baidu.com/s/1slaRWF7" target="_blank">http://pan.baidu.com/s/1slaRWF7</a><strong>&nbsp;&nbsp;密码: <font color="#ff0000">rajm</font></strong></p><p align="left">② PHP3小时光速入门[2014新版] <a href="http://pan.baidu.com/s/1pGHc0" target="_blank">http://pan.baidu.com/s/1pGHc0</a></p><p align="left">③ PHP3天基础巩固[2014新版] <a href="http://pan.baidu.com/s/106dC0" target="_blank">http://pan.baidu.com/s/106dC0</a></p><p align="left">④ 谈笑间学会Javascript[2014新版] <a href="http://pan.baidu.com/s/1sj6rdEX" target="_blank">http://pan.baidu.com/s/1sj6rdEX</a></p><p align="left"><font size="4"><font color="#0000ff"><br />
+</font></font></p><p align="left"><font size="4"><font color="#0000ff">第二部:PHP实战部分(206集,</font></font><font size="4"><font color="Green">发布完毕</font></font><font size="4"><font color="#0000ff">)</font></font></p><p align="left">讲PHP实战核心知识:</p><p align="left">(变量,常量,函数,</p><p align="left">面向对象</p><p align="left">session&amp;cookie,</p><p align="left">文件上传,目录操作,</p><p align="left">图片处理,</p><p align="left">在线支付等及mysql核心.</p><p align="left">并在学习过程中开发一个完整电子商城! 通过项目实战来学习.</p><br />
+<strong>下载地址:</strong><br />
+⑤ MySQL轻快掌握[2014新版]&nbsp;&nbsp;<a href="http://pan.baidu.com/s/1kUCbF63" target="_blank">http://pan.baidu.com/s/1kUCbF63</a> <strong>密码: </strong><font color="#ff0000">qcch</font><br />
+⑥ PHP面向对象视频教程 <a href="http://pan.baidu.com/s/1qXvXDqG" target="_blank">http://pan.baidu.com/s/1qXvXDqG</a> <strong>密码: </strong><font color="#ff0000">apvh</font><br />
+⑦ 布尔商城PHP实战视频程 <a href="http://pan.baidu.com/s/1xOtRL" target="_blank">http://pan.baidu.com/s/1xOtRL</a><br />
+<br />
+<p align="left"><font size="4"><font color="#0000ff">第三部:PHP程序员拔高部分(150集左右,</font></font><font color="#0800"><font size="4">发布完毕</font></font><font size="4"><font color="#0000ff">)</font></font></p><p align="left">此部分是为了把学习者由初级PHPer拔高到中级水平.</p><p align="left">讲Js高级(原型链,作用域链,面向对象,词法分析,高级事件编程)</p><p align="left">Ajax(深入讲解ajax原理及服务器推技术)</p><p align="left">Smarty模板原理,并带你开发微型模板引擎</p><p align="left">Jquery深入讲解,并带你开发一个微型jquery框架</p><p align="left">以及ThinkPHP框架使用使用及源码分析.</p><p align="left">XML及WebService</p><p align="left">此阶段课程已超越&quot;学其用法&quot;,而到&quot;研究其源码和原理&quot;.</p><p align="left">对学习者的水平有一个根本性的提升!</p><br />
+<font face="微软雅黑"><font size="4"><strong>下载地址:</strong></font></font><br />
+⑧ smarty3超级教程 <a href="http://pan.baidu.com/s/1qY4Abgw" target="_blank">http://pan.baidu.com/s/1qY4Abgw</a> <strong>密码: <font color="#ff0000">n45z</font></strong><br />
+⑨ XML教程 (11集) <a href="https://pan.baidu.com/s/1dERqw1r" target="_blank">https://pan.baidu.com/s/1dERqw1r</a> <strong>密码: </strong><font color="#ff0000">pt9b</font><br />
+⑩ HTTP协议 <a href="http://pan.baidu.com/s/1i4Onuex" target="_blank">http://pan.baidu.com/s/1i4Onuex</a> <strong>密码: <font color="#ff0000">x538</font></strong><br />
+⑪ Ajax彻底研究 <a href="http://pan.baidu.com/s/1dF0uUrv" target="_blank">http://pan.baidu.com/s/1dF0uUrv</a> <strong>密码: <font color="#ff0000">da1f</font></strong><br />
+⑫ 邮件发送 <a href="http://pan.baidu.com/s/1rIJeU" target="_blank">http://pan.baidu.com/s/1rIJeU</a><br />
+⑬ Javascript高级 <a href="http://pan.baidu.com/s/1CH1pW" target="_blank">http://pan.baidu.com/s/1CH1pW</a><br />
+⑭ jQuery经典实战 链接: <a href="https://pan.baidu.com/s/1i5bX6FN" target="_blank">https://pan.baidu.com/s/1i5bX6FN</a> <strong>密码:</strong><font color="#ff0000"> 28ye</font><br />
+<br />
+<p align="left"><font color="blue">第四部:就业实战部分(90集左右,</font><font color="#ff0ff"><font size="4">逐步发布中</font></font><font color="blue">)</font></p><p align="left">此部分专为就业打造,</p><p align="left">SVN版本控制器</p><p align="left">Memcached,页面静态化.</p><p align="left">mysql主从数据库,读写分离</p><p align="left">Ecshop,dede二次开发</p><br />
+<p align="left"><strong>下载地址:</strong></p><p align="left">⑮ MySQL高级 <a href="https://pan.baidu.com/s/1o88Xu6Q" target="_blank">https://pan.baidu.com/s/1o88Xu6Q</a><strong> 密码:</strong> <font color="#ff0000">wi57</font></p><p align="left">⑯WebService <a href="http://pan.baidu.com/s/1c1DBPjM" target="_blank">http://pan.baidu.com/s/1c1DBPjM</a> <strong>密码: </strong><font color="#ff0000">2wvf</font></p><br />
+
   </div>
   <div class="share" id="share">
 	  <h3>源码分享</h3>
-	  		<text>MySQL入门基础</text>
-	  		<p>http://www.itying.com/</p>
-	  </div>
+		<div class="share-span">
+	  		<img src="laravel.png" class="share-img"/>
+        <div class="share-content">
+	  		<p><text>laravel+h+后台</text>&nbsp;&nbsp;<a href="http://pan.baidu.com/s/1i5wuxzn" target="_blank">http://pan.baidu.com/s/1i5wuxzn</a>  密码：kt7u</p>
+      </div>
+		</div>
+
+    <div class="share-span">
+        <img src="tp5.png" class="share-img"/>
+        <div class="share-content">
+        <p><text>tp5+h+后台</text>&nbsp;&nbsp;<a href="http://pan.baidu.com/s/1kVHpdx9" target="_blank">http://pan.baidu.com/s/1kVHpdx9</a>  密码：ujiz</p>
+      </div>
+    </div>
+	 </div>
   <div class='footer' id="intro">
 	  <img src="intro.jpg" class='photo-img' />
      <!--<img src="code.jpg" class='photo-img' />-->

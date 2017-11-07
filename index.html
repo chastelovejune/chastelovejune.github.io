@@ -9,6 +9,8 @@
   <title>chastelove的技术博客</title>
  </head>
  <script src="jquery-2.0.0.min.js"></script>
+ <script src="vue.min.js"></script>
+
  <style type="text/css">
  body{
  	margin: 0px;
@@ -216,11 +218,28 @@ PHP technology station, front end development</text>
       <a href="#share"> <span>源码分享code share</span></a>
   </div>
   <div >
+  <div style="display: flex;justify-content: flex-start;flex-direction: row">
 <img src="intro.jpg" class='photo-img' style="margin-left: 10%" />
+<div style="display: flex;justify-content: flex-start;flex-direction:column;width: 390px;margin-top: 70px;font-family: '微软雅黑';font-size:17px;">
+<text>Author&nbsp;|&nbsp;ChasteLove</text>
+<p style="font-family: 'vijaya';font-size:22px">PHP developers, 18 year old literary circles from the media industry failed to get started, 24 years of work travel, reading, writing, knocking code, hand-held bad sword without a sword, sword sword to win</p>
+</div>
+</div>
+<center> <h3 style="margin-left: 3%"><img src="wenzhang.png" class="icon" />博文<a herf="javascript:void(0)" class="en-text" onclick="$('#demo').toggle(1000)">收起</a></h3>
+   </center>
+<!---->
+  </div>
+
+    <ul id="demo" style="margin-left:10%">
+    <li v-for="(singer,index) in wenzhang">
+      <a :href="singer.href" target="_blank">{{singer.no}} {{singer.name}}  </a>
+    </li>
+  </ul>
+
      <h3><center><img src="jishu.png" class="icon" />干货分享</center></h3>
   <div class="content">
 
-  <div class="content-left">
+  <div class="content-left" >
  
   	<div class='content-span' id='jishu'>
   		<img class="content-img" src="flex.png"/>
@@ -239,7 +258,7 @@ PHP technology station, front end development</text>
   	<div class='content-span' >
   		<img class="content-img" src="nginx.png"/>
   		<div class="content-text">
-  		<a href="http://blog.csdn.net/wangyunzhong123/article/details/52764759" target="_blank"><text>Apache 在更改DocumentRoot，或新增虚拟目录之后出现403错误</text></a>
+  		<a href="http://blog.csdn.net/wangyunzhong123/article/details/52764759" target="_blank"><text>Apache 在更改DocumentRoot出现403错误</text></a>
   	
   		</div>
   	</div>
@@ -253,6 +272,7 @@ PHP technology station, front end development</text>
   </div>
  
   </div>
+
    <center> <h3 style="margin-left: 3%"><img src="download.png" class="icon" />新手视频<a herf="javascript:void(0)" class="en-text" onclick="$('#radio').toggle(1000)">收起</a></h3>
    </center>
     <div class="radio" id="radio" >
@@ -295,4 +315,15 @@ PHP technology station, front end development</text>
 </audio>
 </div>
  </body>
+ <script>
+  var app = new Vue({
+    el:'#demo',
+    data:{
+      wenzhang:[
+        {no:1, name:'flex布局基础——精通网页布局',href:"http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool"},
+    
+      ]
+    }
+  });
+  </script>
 </html>

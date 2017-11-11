@@ -6,7 +6,7 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>chastelove的技术博客</title>
+  <title>Chastelove的技术博客</title>
  </head>
  <script src="jquery-2.0.0.min.js"></script>
  <script src="vue.min.js"></script>
@@ -15,6 +15,7 @@
  body{
  	margin: 0px;
  	font-family: "微软雅黑";
+
  
 
  }
@@ -107,8 +108,8 @@ a:link{
 	justify-content:space-between;
 }
 .content-img{
-	width: 230px;
-  height: 150px;
+	width: 180px;
+  height: 100px;
 	margin-right: 3%;
 }
 .content-left{
@@ -122,11 +123,11 @@ a:link{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	border:0.01em solid gray;
+	/*border:0.01em solid gray;*/
 	padding-left: 3%;
   padding-right: 3%;
-  width: 230px;
-  height: 200px;
+  width: 180px;
+  height: 150px;
   padding-top: 10px;
 
 }
@@ -134,7 +135,7 @@ p{
 	font-family: "仿宋";
 }
 .content-right{
-	padding:3%;
+	padding:2%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -151,6 +152,7 @@ p{
 .radio{
 	padding:2%;
   color: #448aca;
+  font-size:13px; 
 
 
 }
@@ -175,7 +177,7 @@ video{
     height: 70%;
 }
 .nav>a:link {color: white}		/* 未访问的链接 */
-a:visited {color:gray;font-weight:bold; }	/* 已访问的链接 */
+a:visited {color:blue;font-weight:bold; }	/* 已访问的链接 */
 a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
 a:active {color: #448aca}
 h3{
@@ -186,6 +188,11 @@ h3{
 a{
   color:#ff8aca;
 }
+.content-text{
+  font-size: 12px;
+  font-color: #448aca;
+}
+
  </style>
  <body>
  <!--
@@ -217,24 +224,7 @@ PHP technology station, front end development</text>
     <a href="#radio"> <span>新手视频 Newcomer audio</span></a> |
       <a href="#share"> <span>源码分享code share</span></a>
   </div>
-  <div >
-  <div style="display: flex;justify-content: flex-start;flex-direction: row">
-<img src="intro.jpg" class='photo-img' style="margin-left: 10%" />
-<div style="display: flex;justify-content: flex-start;flex-direction:column;width: 390px;margin-top: 70px;font-family: '微软雅黑';font-size:17px;">
-<text>Author&nbsp;|&nbsp;ChasteLove</text>
-<p style="font-family: 'vijaya';font-size:22px">PHP developers, 18 year old literary circles from the media industry failed to get started, 24 years of work travel, reading, writing, knocking code, hand-held bad sword without a sword, sword sword to win</p>
-</div>
-</div>
-<center> <h3 style="margin-left: 3%"><img src="wenzhang.png" class="icon" />博文<a herf="javascript:void(0)" class="en-text" onclick="$('#demo').toggle(1000)">收起</a></h3>
-   </center>
-<!---->
-  </div>
 
-    <ul id="demo" style="margin-left:10%">
-    <li v-for="(singer,index) in wenzhang">
-      <a :href="singer.href" target="_blank">{{singer.no}} {{singer.name}}  </a>
-    </li>
-  </ul>
 
      <h3><center><img src="jishu.png" class="icon" />干货分享</center></h3>
   <div class="content">
@@ -242,43 +232,61 @@ PHP technology station, front end development</text>
   <div class="content-left" >
  
   	<div class='content-span' id='jishu'>
+    <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank">
   		<img class="content-img" src="flex.png"/>
   		<div class="content-text">
-  		<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target=""><text>flex布局基础——精通网页布局</text></a>
+  		<text >flex布局基础——精通网页布局</text></a>
   	
   		</div>
   	</div>
         <div class='content-span'>
+        <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank">
       <img class="content-img" src="flex.png"/>
       <div class="content-text">
-      <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target=""><text>flex实例篇——精通网页布局</text></a>
+      <text>flex实例篇——精通网页布局</text></a>
      
       </div>
     </div>
   	<div class='content-span' >
+      <a href="http://blog.csdn.net/wangyunzhong123/article/details/52764759" target="_blank">
   		<img class="content-img" src="nginx.png"/>
   		<div class="content-text">
-  		<a href="http://blog.csdn.net/wangyunzhong123/article/details/52764759" target="_blank"><text>Apache 在更改DocumentRoot出现403错误</text></a>
+  	<text>Apache 在更改DocumentRoot出现403错误</text></a>
   	
   		</div>
   	</div>
     <div class='content-span' >
+    <a href="http://www.9958.pw/post/nginx_config#6531798-qzone-1-65778-1afaa8736951645a8df12be13c808fce" target="_blank">
       <img class="content-img" src="nginx.jpg"/>
       <div class="content-text">
-      <a href="http://www.9958.pw/post/nginx_config#6531798-qzone-1-65778-1afaa8736951645a8df12be13c808fce" target="_blank"><text>Nginx配置文件nginx.conf中文详解</text></a>
+      <text>Nginx配置文件nginx.conf中文详解</text></a>
      
       </div>
     </div>
   </div>
  
   </div>
+  <hr width=50%; size=0.5 color=gray style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" />
+  <div style="display: flex;flex-direction: row;justify-content: space-around;">
+    <div>
+      <center><h3 style="margin-left: 3%"><img src="wenzhang.png" class="icon" />博文<a herf="javascript:void(0)" class="en-text" onclick="$('#demo').toggle(1000)">收起</a></h3></center>  
 
+      <ul id="demo" style="margin-left:3%">
+        <li v-for="(singer,index) in wenzhang">
+          <a :href="singer.href" target="_blank">{{singer.no}} {{singer.name}}  </a>
+        </li>
+      </ul>
+   </div>
+  
+</div>
+<hr width=50%; size=0.5 color=gray style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" />
    <center> <h3 style="margin-left: 3%"><img src="download.png" class="icon" />新手视频<a herf="javascript:void(0)" class="en-text" onclick="$('#radio').toggle(1000)">收起</a></h3>
    </center>
     <div class="radio" id="radio" >
   	
   		
-<p align="left">① HTML视频[2014新版]&nbsp; &nbsp;<a href="http://pan.baidu.com/s/1slaRWF7" target="_blank">http://pan.baidu.com/s/1slaRWF7</a><strong>&nbsp;&nbsp;密码: <font color="#448aca">rajm</font></strong></p><p align="left">② PHP3小时光速入门[2014新版] <a href="http://pan.baidu.com/s/1pGHc0" target="_blank">http://pan.baidu.com/s/1pGHc0</a></p><p align="left">③ PHP3天基础巩固[2014新版] <a href="http://pan.baidu.com/s/106dC0" target="_blank">http://pan.baidu.com/s/106dC0</a></p><p align="left">④ 谈笑间学会Javascript[2014新版] <a href="http://pan.baidu.com/s/1sj6rdEX" target="_blank">http://pan.baidu.com/s/1sj6rdEX</a></p><p align="left"><font size="4"><font color="#448aca">
+<p align="left">① HTML视频[2014新版]&nbsp; &nbsp;<a href="http://pan.baidu.com/s/1slaRWF7" target="_blank">http://pan.baidu.com/s/1slaRWF7</a><strong>&nbsp;&nbsp;密码: <font color="#448aca">rajm</font></strong></p><p align="left">② PHP3小时光速入门[2014新版] <a href="http://pan.baidu.com/s/1pGHc0" target="_blank">http://pan.baidu.com/s/1pGHc0</a></p><p align="left">③ PHP3天基础巩固[2014新版] <a href="http://pan.baidu.com/s/106dC0" target="_blank">http://pan.baidu.com/s/106dC0</a></p><p align="left">④ 谈笑间学会Javascript[2014新版] <a href="http://pan.baidu.com/s/1sj6rdEX" target="_blank">http://pan.baidu.com/s/1sj6rdEX</a></p>
+<p align="left"><font size="2"><font color="#448aca">
 ⑤ MySQL轻快掌握[2014新版]&nbsp;&nbsp;<a href="http://pan.baidu.com/s/1kUCbF63" target="_blank">http://pan.baidu.com/s/1kUCbF63</a> <strong>密码: </strong><font color="#448aca">qcch</font><br />
 ⑥ PHP面向对象视频教程 <a href="http://pan.baidu.com/s/1qXvXDqG" target="_blank">http://pan.baidu.com/s/1qXvXDqG</a> <strong>密码: </strong><font color="#448aca">apvh</font><br />
 ⑦ 布尔商城PHP实战视频程 <a href="http://pan.baidu.com/s/1xOtRL" target="_blank">http://pan.baidu.com/s/1xOtRL</a><br />
@@ -292,6 +300,7 @@ PHP technology station, front end development</text>
 <p align="left">⑮ MySQL高级 <a href="https://pan.baidu.com/s/1o88Xu6Q" target="_blank">https://pan.baidu.com/s/1o88Xu6Q</a><strong> 密码:</strong> <font color="#448aca">wi57</font></p><p align="left">⑯WebService <a href="http://pan.baidu.com/s/1c1DBPjM" target="_blank">http://pan.baidu.com/s/1c1DBPjM</a> <strong>密码: </strong><font color="#448aca">2wvf</font></p><br />
 
   </div>
+  <hr width=50%; size=0.5 color=gray style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" />
   <center>  <h3 style="margin-left: 3%"><img src="share.png" class="icon"/>源码分享<a herf="javascript:void(0)" class="en-text" onclick="$('#share').toggle(1000)">收起</a></h3></center>
   <div class="share" id="share" >
 	
@@ -309,10 +318,16 @@ PHP technology station, front end development</text>
       </div>
     </div>
 	 </div>
- 
-    <audio src="flowerdance.mp3" controls="controls" autoplay="ture" style="display: fixed;bottom: 0px">
+     <div style="display: flex;justify-content: flex-start;flex-direction: row;">
+        <img src="intro.jpg" class='photo-img'  width="100%" height="100%" />
+          <div style="display: flex;justify-content: flex-start;flex-direction:column;width: 390px;font-family: '微软雅黑';margin-top:70px;font-size:13px;">
+          <text style="color:black">Author&nbsp;|&nbsp;ChasteLove</text>
+          <p style="font-family: 'vijaya';font-size:22px;color:black">PHP developers, 18 year old literary circles from the media industry failed to get started, 24 years of work travel, reading, writing, knocking code, hand-held bad sword without a sword, sword sword to win</p>
+        </div>
+    </div>
+    <!--<audio src="flowerdance.mp3" controls="controls" autoplay="ture" style="display: fixed;bottom: 0px">
 您的浏览器不支持 audio标签。
-</audio>
+</audio>-->
 </div>
  </body>
  <script>

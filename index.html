@@ -336,8 +336,8 @@ PHP technology station, front end development</text>
           <p style="font-family: 'vijaya';font-size:22px;color:black">PHP developers, 18 year old literary circles from the media industry failed to get started, 24 years of work travel, reading, writing, knocking code, hand-held bad sword without a sword, sword sword to win</p>
         </div>
 
-             <div class="roll-wrap roll_col h600" id="d" style="position: absolute; right: 50px; top: 900px;">
-        <ul class="roll__list" style="position: absolute; right: 20px;top: 900px; " id="roll__list">
+             <div class="roll-wrap roll_col h600" id="d" style=" right: 50px; ">
+        <ul class="roll__list" style=" right: 20px;" id="roll__list">
             <li  v-for="(list,index) in list" style="text-align: center;">
               <img :src="list.src"  width="450" height="260" style="margin: 10px" />{{list.name}}
             </li>
@@ -387,12 +387,6 @@ PHP technology station, front end development</text>
       ]
     }
   });
-  $('#d').rollSlide({
-        orientation: 'bottom',
-        num: 3,
-        v: 1500,
-        space: 500,
-        isRoll: true
-    });
+
   </script>
 </html>

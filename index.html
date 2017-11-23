@@ -186,7 +186,7 @@ video{
     height: 138px;
 }
 .nav>a:link {color: white}		/* 未访问的链接 */
-a:visited {color:blue;font-weight:bold; }	/* 已访问的链接 */
+a:visited {color:white;font-weight:bold; }	/* 已访问的链接 */
 a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
 a:active {color: #448aca}
 h3{
@@ -249,8 +249,10 @@ PHP technology station, front end development</text>
     <a href="#radio"> <span>新手视频 Newcomer audio</span></a> |
       <a href="#share"> <span>源码分享code share</span></a>
   </div>
-<div style="display: flex;flex-direction: row;justify-content: space-between; ">
-   <div>
+
+<div style="display: flex;flex-direction: row;justify-content: space-between;">
+   <div >
+   		<img src="banner.png" width="920" height="200" />
      <h3><center><img src="jishu.png" class="icon" />干货分享</center></h3>
      <div class="content">
 
@@ -269,13 +271,14 @@ PHP technology station, front end development</text>
  
   </div>
   <hr width=50%; size=0.5 color=gray style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" />
+
   <div style="display: flex;flex-direction: row;justify-content: space-around;">
     <div>
       <center><h3 style="margin-left: 3%"><img src="wenzhang.png" class="icon" />博文<a herf="javascript:void(0)" class="en-text" onclick="$('#demo').toggle(1000)">收起</a></h3></center>  
 
       <ul id="demo" style="margin-left:3%">
         <li v-for="(singer,index) in wenzhang">
-          <a :href="singer.href" target="_blank" class="bowen-a"> {{singer.name}}  </a>
+          <a :href="singer.href" target="_blank" class="bowen-a" style="color:#448aca"> {{singer.name}}  </a>
           <span style="padding: 30px;font-family:'微软雅黑'; color:#448aca; font-size: 13px ">{{singer.time}}</span>
           <span style="padding: 10px;font-family:'微软雅黑'; color:#448aca;font-size: 13px">{{singer.author}}</span>
           <div class="bowen-p">{{singer.introduce}}</div>
@@ -328,22 +331,27 @@ PHP technology station, front end development</text>
 	 </div>
 
 
-   </div><hr style="margin:0px;color:gray;margin-top: 15%;margin-bottom: 15%" />
-       <div style="display: flex;justify-content: flex-start;flex-direction: column;">
-        <img src="intro.jpg"  width="100%" height="100%" />
-          <div style="display: flex;justify-content: flex-end;flex-direction:column;width: 390px;font-family: '微软雅黑';margin-top:10px;font-size:13px;margin-left:0px ">
+   </div><hr style="margin:0px;color:gray;margin-top: 15%;margin-bottom: 63%" />
+       <div style="display: flex;justify-content: flex-start;flex-direction: column;margin: 0px auto;width: 440px">
+        <img src="intro.jpg"  width="385" height="200" />
+          <div style="display: flex;justify-content: flex-end;flex-direction:column;width: 390px;font-family: '微软雅黑';margin-top:10px;font-size:13px;margin:0 auto ">
           <text style="color:black">Author&nbsp;|&nbsp;ChasteLove</text>
           <p style="font-family: 'vijaya';font-size:22px;color:black">PHP developers, 18 year old literary circles from the media industry failed to get started, 24 years of work travel, reading, writing, knocking code, hand-held bad sword without a sword, sword sword to win</p>
         </div>
-
+       
              <div class="roll-wrap roll_col h600" id="d" style=" right: 50px; ">
         <ul class="roll__list" style=" right: 20px;" id="roll__list">
-            <li  v-for="(list,index) in list" style="text-align: center;">
-              <img :src="list.src"  width="450" height="260" style="margin: 10px" />{{list.name}}
+            <li  v-for="(list,index) in list" style="display: flex;flex-direction: column;justify-content: center;">
+              <img :src="list.src"  width="350" height="200" style="margin:0px auto " /><span align="center" style="margin-bottom: 40px;margin-top: 5px">{{list.name}}</span>
             </li>
          
         </ul>
-        
+         <!--start-->
+        <div style="font-family: '隶书';font-size: 14px;color: black;padding: 3%">
+        &nbsp;	&nbsp;我的网名叫ChasteLove,大学时候沉迷于LOL(英雄联盟)游戏,从S1就喜欢LOL一位职业选手———厂长（诺言，ClearLove），ChasteLove这名字为厂长的小号ID，后来被我用来作为网名，意为纯洁的爱，厂长一直打职业到现在很鼓舞人心，时刻提醒我要做一个单纯、却又敢于拼搏的人。我喜欢研究技术，旅行，打LOL，看书，听歌。
+        <div>
+
+     <!--end-->
     </div>
           <!--<audio src="flowerdance.mp3" controls="controls" autoplay="ture" style="display: fixed;bottom: 0px">
       您的浏览器不支持 audio标签。
@@ -369,7 +377,7 @@ PHP technology station, front end development</text>
         {no:1, name:'Flex 布局教程：语法篇',href:"http://blog.csdn.net/wangyunzhong123/article/details/52764759",src:"flex.png"},
         {no:1, name:'Apache 在更改DocumentRoot出现403错误',href:"http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool",src:"nginx.png"},
         {no:1, name:'Nginx配置文件nginx.conf中文详解',href:"http://www.9958.pw/post/nginx_config#6531798-qzone-1-65778-1afaa8736951645a8df12be13c808fce",src:"nginx.png"},
-          {no:1, name:'Nginx配置文件nginx.conf中文详解',href:"http://www.9958.pw/post/nginx_config#6531798-qzone-1-65778-1afaa8736951645a8df12be13c808fce",src:"nginx.png"}
+        
     
       ]
     }
@@ -378,11 +386,9 @@ PHP technology station, front end development</text>
     el:'#roll__list',
     data:{
       list:[
-        {name:'flex布局基础——精通网页布局',src:"flex.png"},
-         {name:'flex布局基础——精通网页布局',src:"flex.png"},
-          {name:'flex布局基础——精通网页布局',src:"flex.png"},
-           {name:'flex布局基础——精通网页布局',src:"flex.png"},
-  
+        {name:'2016在南京玄武湖',src:"me.jpg"},
+        {name:'2015在天津滨海三街',src:"psbHKI15O2O.jpg"},
+      
     
       ]
     }
